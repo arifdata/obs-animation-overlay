@@ -15,6 +15,10 @@ export default makeScene2D(function* (view) {
 
   view.add(<Txt ref={userName} text={"ArifM Streaming"} fontFamily={'Poetsen One'} fill={'#F0F0F0'} fontSize={80} y={-300} />);
   view.add(<Txt ref={startingSoonText} text={"Starting Soon..."} fontFamily={'Poetsen One'} fill={'#F0F0F0'} fontSize={72} y={-150} />);
+  view.add(<Txt text={"@arifmstreaming"} fontFamily={'Poetsen One'} fill={'#F0F0F0'} fontSize={24} y={230} x={-500} />);
+  //view.add(<Txt text={"github.com"} fontFamily={'Poetsen One'} fill={'#F0F0F0'} fontSize={24} y={230} x={-150} />);
+  view.add(<Txt text={"cosmic.cetacea"} fontFamily={'Poetsen One'} fill={'#F0F0F0'} fontSize={24} y={230} x={170} />);
+  //view.add(<Txt text={"@arifmstreaming"} fontFamily={'Poetsen One'} fill={'#F0F0F0'} fontSize={24} y={230} x={-500} />);
   view.add(
     <Line
       points={[
