@@ -9,12 +9,12 @@ export default makeScene2D(function* (view) {
   const userName = createRef<Txt>();
   const startingSoonText = createRef<Txt>();
   const centerCircle = createRef<Circle>();
-
-  view.add(<Txt ref={userName} text={"ArifM Streaming"} fontFamily={'Poetsen One'} fill={'#F0F0F0'} fontSize={80} y={-300} />);
-  view.add(<Txt ref={startingSoonText} text={"Stream is Ending...Thx for watching."} fontFamily={'Poetsen One'} fill={'#F0F0F0'} fontSize={72} y={-150} />);
+  
+  view.add(<Txt ref={userName} text={"ArifM Streaming"} fontFamily={'Fjalla One'} fill={'#F0F0F0'} fontSize={80} y={-300} />);
+  view.add(<Txt ref={startingSoonText} text={"Starting Soosn..."} fontFamily={'Jaro'} fill={'#F0F0F0'} fontSize={72} y={-150} />);
   view.add(<Txt text={"@arifmstreaming"} fontFamily={'Poetsen One'} fill={'#F0F0F0'} fontSize={32} y={230} x={-500} />);
   //view.add(<Txt text={"github.com"} fontFamily={'Poetsen One'} fill={'#F0F0F0'} fontSize={24} y={230} x={-150} />);
-  view.add(<Txt text={"cosmic.cetacea"} fontFamily={'Poetsen One'} fill={'#F0F0F0'} fontSize={32} y={230} x={170} />);
+  view.add(<Txt text={"cosmic.cetacea"} fontFamily={'Jaro'} fill={'#F0F0F0'} fontSize={32} y={230} x={170} />);
   //view.add(<Txt text={"@arifmstreaming"} fontFamily={'Poetsen One'} fill={'#F0F0F0'} fontSize={24} y={230} x={-500} />);
   view.add(
     <Line
@@ -44,8 +44,8 @@ export default makeScene2D(function* (view) {
     <Circle
       ref={centerCircle}
       size={100}
-      x={0}
-      fill={'#F45050'}
+      x={-130}
+      fill={'#F9D949'}
     />,
   );
 
@@ -92,7 +92,7 @@ export default makeScene2D(function* (view) {
   yield* all(
     //userName().scale(1.1, 2).to(1, 2),
     //startingSoonText().scale(0.9, 2).to(1, 2),
-    // centerCircle().position.x(130, 2).to(-130, 2),
-    // centerCircle().fill('#F0F0F0', 2).to('#F9D949', 2),
+    centerCircle().position.x(130, 2).to(-130, 2),
+    centerCircle().fill('#F45050', 2).to('#F9D949', 2),
   );
 });
