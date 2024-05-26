@@ -15,8 +15,8 @@ export default makeScene2D(function* (view) {
         width={30}
         height={30}
         x={-130 + 65 * i}
-        fill="#FFA732"
-        radius={30}
+        fill="#EF4040"
+        radius={5}
       />
     )),
   );
@@ -46,7 +46,7 @@ export default makeScene2D(function* (view) {
   );
   
   view.add(<Txt text={"ArifM Streaming"} fontFamily={'Anton'} fill={'#F0F0F0'} fontSize={96} y={-250} />);
-  view.add(<Txt text={"Starting Soon"} fontFamily={'Anton'} fill={'#F0F0F0'} fontSize={72} y={-120} />);
+  view.add(<Txt text={"Be Right Back"} fontFamily={'Anton'} fill={'#F0F0F0'} fontSize={72} y={-120} />);
   view.add(<Txt text={"@arifmstreaming"} fontFamily={'Fjalla One'} fill={'#F0F0F0'} fontSize={32} y={230} x={-520} />);
   //view.add(<Txt text={"github.com"} fontFamily={'Poetsen One'} fill={'#F0F0F0'} fontSize={24} y={230} x={-150} />);
   view.add(<Txt text={"cosmic.cetacea"} fontFamily={'Fjalla One'} fill={'#F0F0F0'} fontSize={32} y={230} x={180} />);
@@ -89,8 +89,8 @@ export default makeScene2D(function* (view) {
 
   yield* all(
     sequence(0.5, ...rects.map(rect => rect.position.y(50, 1).to(-50, 1).to(0, 1)),),
-    all(...rects.map(rect => rect.fill('#FFA732', 0.5).to('#EF4040', 2).to('#FFA732', 0.5),)),
-    all(...rects.map(rect => rect.radius(30, 0.5).to(10, 2).to(30, 0.5),)),
+    all(...rects.map(rect => rect.fill('#EF4040', 0.5).to('#FFA732', 2).to('#EF4040', 0.5),)),
+    all(...rects.map(rect => rect.radius(5, 0.5).to(30, 2).to(5, 0.5),)),
   );
 
 });
